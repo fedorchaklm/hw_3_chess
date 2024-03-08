@@ -1,0 +1,69 @@
+/* 10 */
+:root {
+  --chess-bg-dark: #b58863;
+  --chess-bg-light: #f0d9b5;
+  --frame-bg: #7d6c5e;
+}
+
+/* 0 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+}
+
+/* 10 */
+.chess__row {
+  clear: both;
+}
+
+/* 10 */
+.chess__item {
+  width: 100px;
+  height: 100px;
+  float: left;
+  text-align: center;
+  line-height: 100px;
+  font-size: 24px;
+}
+
+/* 40 */
+.chess__row:nth-child(odd) .chess__item:nth-child(odd),
+/* 40 */
+.chess__row:nth-child(even) .chess__item:nth-child(even) {
+  background-color: var(--chess-bg-light);
+}
+
+/* 40 */
+.chess__row:nth-child(odd) .chess__item:nth-child(even),
+/* 40 */
+.chess__row:nth-child(even) .chess__item:nth-child(odd) {
+  background-color: var(--chess-bg-dark);
+}
+
+/* 40 */
+.chess .chess__row .chess__item:first-child,
+/* 40 */
+.chess .chess__row .chess__item:last-child {
+  width: 40px;
+  background-color: var(--frame-bg);
+  font-family: sans-serif;
+  color: white;
+}
+
+/* 40 */
+.chess .chess__row:first-child .chess__item, 
+/* 40 */
+.chess .chess__row:last-child .chess__item {
+  height: 40px;
+  background-color: var(--frame-bg);
+  line-height: 40px;
+  font-family: sans-serif;
+  color: white;
+}
+
+/* 1 */
+img {
+  vertical-align: middle;
+}
