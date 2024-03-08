@@ -3,6 +3,10 @@
   --chess-bg-dark: #b58863;
   --chess-bg-light: #f0d9b5;
   --frame-bg: #7d6c5e;
+  --frame-text-color: #fff;
+  --frame-width: 40px;
+  --frame-font-size: 24px;
+  --chess-size: 100px;
 }
 
 /* 0 */
@@ -13,6 +17,11 @@
   bottom: 0;
 }
 
+/* 1 */
+img {
+  vertical-align: middle;
+}
+
 /* 10 */
 .chess__row {
   clear: both;
@@ -20,12 +29,11 @@
 
 /* 10 */
 .chess__item {
-  width: 100px;
-  height: 100px;
+  width: var(--chess-size);
+  height: var(--chess-size);
   float: left;
   text-align: center;
-  line-height: 100px;
-  font-size: 24px;
+  line-height: var(--chess-size);
 }
 
 /* 40 */
@@ -45,25 +53,28 @@
 /* 40 */
 .chess .chess__row .chess__item:first-child,
 /* 40 */
-.chess .chess__row .chess__item:last-child {
-  width: 40px;
+.chess .chess__row .chess__item:last-child, 
+/* 40 */
+.chess .chess__row:first-child .chess__item, 
+/* 40 */
+.chess .chess__row:last-child .chess__item {
   background-color: var(--frame-bg);
-  font-family: sans-serif;
-  color: white;
+  font-family: Arial, sans-serif;
+  font-size: var(--frame-font-size);
+  color: var(--frame-text-color);
+}
+
+/* 40 */
+.chess .chess__row .chess__item:first-child,
+/* 40 */
+.chess .chess__row .chess__item:last-child {
+  width: var(--frame-width);
 }
 
 /* 40 */
 .chess .chess__row:first-child .chess__item, 
 /* 40 */
 .chess .chess__row:last-child .chess__item {
-  height: 40px;
-  background-color: var(--frame-bg);
-  line-height: 40px;
-  font-family: sans-serif;
-  color: white;
-}
-
-/* 1 */
-img {
-  vertical-align: middle;
+  height: var(--frame-width);
+  line-height: var(--frame-width);
 }
